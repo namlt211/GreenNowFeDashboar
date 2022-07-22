@@ -1,0 +1,38 @@
+{
+  "name": "green",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.8.2",
+    "@tinymce/tinymce-react": "^4.1.0",
+    "axios": "^0.27.2",
+    "jquery": "^3.6.0",
+    "js-cookie": "^3.0.1",
+    "moment": "^2.29.3",
+    "next": "12.1.6",
+    "react": "18.1.0",
+    "react-dom": "18.1.0",
+    "react-hook-form": "^7.31.3",
+    "react-nextjs-toast": "^1.2.5",
+    "react-redux": "^8.0.2",
+    "react-toastify": "^9.0.5",
+    "redux-cookie": "^0.5.9",
+    "styled-components": "^5.3.5",
+    "tinymce": "^6.1.0",
+    "yup": "^0.32.11"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.7",
+    "babel-plugin-styled-components": "^2.0.7",
+    "eslint": "8.17.0",
+    "eslint-config-next": "12.1.6",
+    "postcss": "^8.4.14",
+    "tailwindcss": "^3.1.1"
+  }
+}
