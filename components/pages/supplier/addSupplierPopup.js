@@ -35,6 +35,14 @@ const PopupAddSupplier = (props) => {
     await addManufacture(manufacture)
       .then((data) => {
         if (data.success) {
+          setManufacture({
+            name: "",
+            address: "",
+            phone: "",
+            image: "",
+            description: "",
+            status: "",
+          });
           toast.success(data.message, {
             position: "top-right",
             autoClose: 2000,
@@ -44,14 +52,7 @@ const PopupAddSupplier = (props) => {
             draggable: true,
             progress: undefined,
           });
-          setManufacture({
-            name: "",
-            address: "",
-            phone: "",
-            image: "",
-            description: "",
-            status: "",
-          });
+
           handleClose();
           handleReload();
         } else {
@@ -96,6 +97,7 @@ const PopupAddSupplier = (props) => {
             }
             type="text"
             className="outline-none border border-solid p-1 mt-1"
+            value={manufacture.name}
           />
         </div>
         <div className="mt-2 flex flex-col">
@@ -105,6 +107,7 @@ const PopupAddSupplier = (props) => {
               setManufacture({ ...manufacture, address: e.target.value })
             }
             type="text"
+            value={manufacture.address}
             className="outline-none border border-solid p-1 mt-1"
           />
         </div>
@@ -115,6 +118,7 @@ const PopupAddSupplier = (props) => {
               setManufacture({ ...manufacture, phone: e.target.value })
             }
             type="text"
+            value={manufacture.phone}
             className="outline-none border border-solid p-1 mt-1"
           />
         </div>
@@ -125,6 +129,7 @@ const PopupAddSupplier = (props) => {
               setManufacture({ ...manufacture, image: e.target.value })
             }
             type="text"
+            value={manufacture.image}
             className="outline-none border border-solid p-1 mt-1"
           />
         </div>
@@ -134,8 +139,10 @@ const PopupAddSupplier = (props) => {
             onChange={(e) =>
               setManufacture({ ...manufacture, status: e.target.value })
             }
+            value={manufacture.status || ""}
             className="outline-none border border-solid p-1 mt-1"
           >
+            <option value="">Trạng thái</option>
             {status?.map((status) => (
               <option key={status?._id} value={status?._id}>
                 {status?.name}
@@ -149,6 +156,7 @@ const PopupAddSupplier = (props) => {
             onChange={(e) =>
               setManufacture({ ...manufacture, description: e.target.value })
             }
+            value={manufacture.description || ""} 
             className="outline-none border border-solid p-1 my-1 min-h-[80px]"
             placeholder="Mô tả chi tiết"
           ></textarea>

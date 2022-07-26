@@ -114,7 +114,7 @@ const AddProductPopup = (props) => {
                 }
                 type="text"
                 placeholder="Tên sản phẩm..."
-                className="border mt-1 border-solid border-[#ccc] p-1 outline-none w-full "
+                className="border mt-1 border-solid border-[#ccc] text-sm p-1 outline-none w-full "
               />
               <label className="mt-2">Hình ảnh: </label>
               <input
@@ -145,7 +145,7 @@ const AddProductPopup = (props) => {
                 onChange={(e) =>
                   setProduct({ ...product, manufacture: e.target.value })
                 }
-                className="border mt-1 w-full border-solid border-[#ccc] outline-none p-1 capitalize"
+                className="border mt-1  w-full border-solid border-[#ccc] outline-none p-[5px] capitalize"
               >
                 <option value="">Chọn nhà cung cấp</option>
                 {supplier?.data?.map((sup, index) => (
@@ -160,7 +160,7 @@ const AddProductPopup = (props) => {
                 onChange={(e) =>
                   setProduct({ ...product, category: e.target.value })
                 }
-                className="border mt-1 border-solid border-[#ccc] p-1 outline-none capitalize  w-full"
+                className="border mt-1 border-solid border-[#ccc] p-[5px] outline-none capitalize  w-full"
               >
                 <option value="">Chọn loại sản phẩm</option>
                 {category?.map((sup, index) => (
@@ -182,7 +182,7 @@ const AddProductPopup = (props) => {
                     className="border mt-1 border-solid border-[#ccc] p-1 outline-none capitalize w-full"
                   />
                 </div>
-                <div className="flex flex-col">
+                <div className="flex flex-col pl-2">
                   <label className="mt-2">Giảm giá: </label>
                   <input
                     value={product.priceSale}

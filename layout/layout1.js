@@ -56,12 +56,12 @@ const Layout1 = () => {
   return (
     <div className="flex justify-center h-screen">
       <div className="flex flex-column mt-[15%]">
-        <div className="w-[300px]">
+        <div className="w-[400px]">
           <div className="flex justify-center text-3xl uppercase text-[#d46312] pb-5">
             Đăng nhập hệ thống
           </div>
           <div className="flex py-5 items-center flex-nowrap">
-            <label className="text-2xl w-[100px] text-[#d46312]">Email:</label>
+            <label className="text-2xl w-2/5 text-[#d46312]">Email:</label>
             <input
               className="w-full h-[30px] rounded-xl border border-solid pl-3 border-[#ccc]"
               type="email"
@@ -69,7 +69,7 @@ const Layout1 = () => {
             />
           </div>
           <div className="flex py-5 items-center">
-            <label className="text-2xl w-[100px] text-[#d46312]">
+            <label className="text-2xl w-2/5 text-[#d46312]">
               Password:
             </label>
             <input
