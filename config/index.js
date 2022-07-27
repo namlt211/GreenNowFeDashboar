@@ -1,4 +1,6 @@
-const SERVER_API = "http://localhost:1234";
+// const SERVER_API = "http://localhost:1234";
+
+const SERVER_API = "https://greenow12.herokuapp.com";
 
 const GET_ALL_MANUFACTURE_API = SERVER_API + "/get-all-manufacture";
 const LOGIN_API = SERVER_API + "/login";
